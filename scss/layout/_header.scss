@@ -1,0 +1,182 @@
+.header {
+    position: sticky !important;
+    top: 0;
+    z-index: 99;
+    background-color: $offwhite;
+
+    .navbar-nav {
+        li {
+            font-size: 18px;
+            margin: 0 15px;
+            @media (min-width: 992px) and (max-width: 1100px) {
+                margin: 0 10px;
+                font-size: 16px;
+            }
+            a {
+                color: $black;
+                padding: 0;
+                border: 5px solid transparent;
+                border-width: 0 0 5px 0;
+                transition: 0.5s all;
+
+                &:hover,
+                &.active {
+                    border-image: url("http://157.245.96.72/heartcare-html/images/green-line.svg") 20;
+                    background-repeat: no-repeat;
+                    background-size: 100px;
+                    transition: 0.5s all;
+                }
+            }
+            img {
+                max-width: 45px;
+            }
+            &:last-child {
+                margin-right: 0;
+                // a {
+                //     &:hover {
+                //         border-image: none;
+                //     }
+                // }
+            }
+        }
+    }
+    .navbar-expand-lg {
+        @media (max-width: 991px) {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            &::after {
+                content: "";
+                background: $lightgreen;
+                display: block;
+                position: absolute;
+                bottom: -20px;
+                right: -20px;
+                border-radius: 100% 0 0 0;
+                width: 125px;
+                height: 125px;
+            }
+            .navbar-toggler {
+                position: fixed;
+                right: 25px;
+                bottom: 25px;
+                z-index: 9;
+                outline: none !important;
+                box-shadow: none !important;
+                .navbar-toggler-icon {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    .icon-bar {
+                        height: 3px;
+                        background: $darkgreen;
+                        width: 100%;
+                        display: block;
+                        -webkit-transition: all 0.3s ease-in-out;
+                        -o-transition: all 0.3s ease-in-out;
+                        transition: all 0.3s ease-in-out;
+                    }
+                }
+                &[aria-expanded="true"] {
+                    .navbar-toggler-icon {
+                        .icon-bar {
+                            &:nth-child(2) {
+                                opacity: 0;
+                            }
+                            &:first-child {
+                                -webkit-transform: translateY(12px) rotate(45deg);
+                                -ms-transform: translateY(12px) rotate(45deg);
+                                -o-transform: translateY(12px) rotate(45deg);
+                                transform: translateY(12px) rotate(45deg);
+                            }
+
+                            &:last-child {
+                                -webkit-transform: translateY(-8px) rotate(-45deg);
+                                -ms-transform: translateY(-8px) rotate(-45deg);
+                                -o-transform: translateY(-8px) rotate(-45deg);
+                                transform: translateY(-8px) rotate(-45deg);
+                            }
+                        }
+                    }
+                }
+            }
+            .navbar-collapse {
+                background: #fff;
+                position: fixed;
+                bottom: 0px;
+                left: 0px;
+                right: 0px;
+                .navbar-nav {
+                    height: 100vh;
+                    background-color: $darkgreen;
+                    @media screen and (max-width: 800px) and (orientation: landscape) {
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        align-content: center;
+                    }
+                    li {
+                        font-size: 18px;
+                        margin: 0 15px;
+                        width: 320px;
+                        margin: 0 auto;
+                        @media (max-width: 380px) {
+                            width: 85%;
+                        }
+                        @media screen and (max-width: 800px) and (orientation: landscape) {
+                            width: 40%;
+                        }
+                        a {
+                            font-size: 24px;
+                            margin: 8px 0;
+                            color: $lightpink;
+                            border: none;
+                            @media (max-width: 480px) {
+                                font-size: 18px;
+                                margin: 5px 0;
+                            }
+                        }
+                        &.phone-icon {
+                            display: none;
+                        }
+                    }
+                    .mobile-menu-banner {
+                        width: 100%;
+                        margin: 0 auto;
+                        text-align: center;
+                        padding-top: 50px;
+                        z-index: 1;
+                        margin-bottom: 60px;
+                        @media (max-width: 480px) {
+                            margin-bottom: 20px;
+                        }
+                        @media screen and (max-width: 800px) and (orientation: landscape) {
+                            display: none;
+                        }
+                        &::after {
+                            background-color: $lightpink;
+                            content: "";
+                            position: absolute;
+                            height: 230px;
+                            width: 100%;
+                            inset: 0;
+                            z-index: -1;
+                        }
+                        img {
+                            height: 350px;
+                            width: 320px;
+                            object-fit: cover;
+                            @media (max-width: 480px) {
+                                height: 300px;
+                                object-position: center;
+                            }
+                            @media (max-width: 380px) {
+                                width: 85%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

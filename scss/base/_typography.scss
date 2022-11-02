@@ -1,0 +1,79 @@
+$darkmagenta: #4C1030;
+$darkgreen: #214635;
+$black: #000;
+$offwhite: #FEF9F2;
+$lightpink: #FFCECC;
+$yellow: #FFA842;
+$lightgreen: #8AD5B7; 
+
+$primary-font: 'Sora';
+$secondary-font: 'Sora';
+
+$fontlocation: './fonts/sora-font/';
+$imagesLocation: '/wp-content/themes/pe-theme-child/images/'; 
+
+$column-width: 80px;
+$column-amount: 13;
+$column-gutter: 0px;
+
+
+h1{
+    font-size: 62px;
+    line-height: 78px;
+    font-weight: 700;
+    font-family: $primary-font;
+    letter-spacing: 1px;
+}
+h2{
+    font-size: 42px;
+    line-height: 53px;  
+    font-weight: 600;
+    font-family: $primary-font;
+    letter-spacing: 0.69px;
+}
+h3{
+    font-size: 22px;
+    line-height: 34px; 
+     font-weight: 700; 
+    font-family: $primary-font;
+    letter-spacing: 0.42px;
+}
+h4{
+    font-size: 22px;
+    line-height: 41px; 
+    font-weight: 600;  
+    font-weight: 700; 
+    font-family: $primary-font;
+    letter-spacing: 0.42px;
+}
+h5{
+   
+    font-family: $primary-font;
+}
+h6{
+   
+    font-family: $primary-font;
+}
+
+p{
+    font-size: 18px;
+    line-height: 34px;
+    font-family: $secondary-font;
+    letter-spacing: 0.35px;
+}
+
+.big-title {
+    font-size: 62px;
+    line-height: 78px;
+}
+
+.page-title {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 41px;   
+    letter-spacing: 0.53px;
+}
+
+@media screen and (max-width:500px){
+
+}
